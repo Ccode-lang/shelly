@@ -17,9 +17,6 @@ while running:
     elif input_ == "exit":
         running = False
     elif "if" in input_:
-        print("error: if is not supported in shelly")
+        print("shelly: error: if is not supported in shelly")
     else:
-        if os.system(input_ + " >/dev/null 2>&1") == 0:
-            os.system(input_)
-        else:
-            print("shelly: error: syntax is wrong")
+        os.system(input_)
